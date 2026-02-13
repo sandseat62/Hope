@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Church Without Curtains | Science & Traps Update</title>
+    <title>A Church Without Curtains | Grace Community Church</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -39,6 +39,7 @@
             margin-bottom: 1rem;
         }
 
+        /* Escalator Styling */
         .escalator-step {
             position: relative;
             padding-left: 2.5rem;
@@ -100,7 +101,7 @@
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-12 h-12 bg-grace-blue rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg">
+                <div class="w-12 h-12 bg-grace-blue rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg shadow-blue-500/30">
                     <i class="fas fa-church"></i>
                 </div>
                 <div>
@@ -109,21 +110,37 @@
                 </div>
             </div>
             <div class="hidden lg:flex gap-6 font-bold text-[10px] uppercase tracking-widest text-slate-500">
-                <a href="#science" class="hover:text-grace-blue">Science</a>
-                <a href="#roadmap" class="hover:text-grace-blue">Roadmap</a>
-                <a href="#traps" class="hover:text-grace-blue">Traps</a>
-                <a href="#essentials" class="hover:text-grace-blue">Essentials</a>
+                <a href="#vision" class="hover:text-grace-blue transition-colors">Vision</a>
+                <a href="#science" class="hover:text-grace-blue transition-colors">Science</a>
+                <a href="#roadmap" class="hover:text-grace-blue transition-colors">Roadmap</a>
+                <a href="#traps" class="hover:text-grace-blue transition-colors">Traps</a>
+                <a href="#essentials" class="hover:text-grace-blue transition-colors">Essentials</a>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="bg-slate-900 text-white py-20 px-6 text-center">
-        <h1 class="text-5xl font-extrabold mb-4">A Church Without <span class="text-grace-blue">Curtains</span></h1>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Trading secrecy for safety. Pulling back the fabric of our digital life.</p>
+    <header class="bg-slate-900 text-white py-24 px-6 text-center overflow-hidden relative">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">A Church Without <span class="text-grace-blue">Curtains</span></h1>
+        <p class="text-slate-400 text-xl max-w-2xl mx-auto font-light">Trading secrecy for safety. Pulling back the fabric of our digital life.</p>
     </header>
 
-    <!-- Science Section Updated -->
+    <!-- Vision Section -->
+    <section id="vision" class="py-20 px-6 -mt-10 relative z-20">
+        <div class="max-w-4xl mx-auto bg-white rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-slate-100">
+            <h2 class="text-3xl font-extrabold text-slate-900 mb-6 flex items-center gap-3">
+                <span class="w-1.5 h-8 bg-grace-blue rounded-full"></span> Our Vision for Freedom
+            </h2>
+            <div class="space-y-6 text-slate-600 leading-relaxed text-lg">
+                <p class="font-semibold text-slate-800 italic">"We aren't just 'trying harder'; we are intentionally giving our brains the space and time to heal through grace and community."</p>
+                <p>At Grace Community Church, we value integrity above all else. When it comes to our digital lives, many of us live behind heavy curtains of secrecy and isolation. This guide brings together science and scripture to help you step out into the light.</p>
+                <p>We see digital addiction as a dual battle: a <strong>battle for the mind</strong> (biological) and a <strong>battle for the spirit</strong> (spiritual). Through our "No Judgment Zones," the power of secrecy is broken.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Science Section -->
     <section id="science" class="py-24 bg-slate-50 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-16 items-start">
@@ -141,24 +158,22 @@
                                 <p class="text-slate-600">Engaging in digital traps releases dopamine, tilting the see-saw toward pleasure.</p>
                             </div>
                         </div>
-
                         <div class="flex gap-6">
                             <div class="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center text-rose-600 shrink-0">
                                 <i class="fas fa-arrow-down"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900 text-xl">The Pain Side</h4>
-                                <p class="text-slate-600">To counteract this "high," the brain automatically adds weight to the opposite side—the pain side. This manifests as intense boredom, irritability, or anxiety the moment the screen is turned off.</p>
+                                <p class="text-slate-600">To counteract this "high," the brain automatically adds weight to the pain side, manifesting as irritability or anxiety when the screen is off.</p>
                             </div>
                         </div>
-
                         <div class="flex gap-6">
                             <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600 shrink-0">
                                 <i class="fas fa-lock"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900 text-xl">The Chronic Trap</h4>
-                                <p class="text-slate-600">If we keep hitting the pleasure side, the brain stays tilted toward pain just to stay "level." This is why people eventually need their phones just to feel "normal" rather than for actual enjoyment.</p>
+                                <p class="text-slate-600">The brain stays tilted toward pain just to stay "level." This is why people eventually need their phones just to feel "normal."</p>
                             </div>
                         </div>
                     </div>
@@ -167,149 +182,159 @@
                 <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border border-slate-200">
                     <div class="seesaw-container mb-8">
                         <div class="seesaw-plank">
-                            <div class="absolute -top-10 left-4 bg-emerald-500 text-white p-2 rounded-lg text-xs font-bold shadow-lg">PLEASURE (Dopamine)</div>
-                            <div class="absolute -bottom-10 right-4 bg-rose-500 text-white p-2 rounded-lg text-xs font-bold shadow-lg">PAIN (Anxiety)</div>
+                            <div class="absolute -top-10 left-4 bg-emerald-500 text-white p-2 rounded-lg text-xs font-bold shadow-lg">PLEASURE</div>
+                            <div class="absolute -bottom-10 right-4 bg-rose-500 text-white p-2 rounded-lg text-xs font-bold shadow-lg">PAIN</div>
                         </div>
                         <div class="seesaw-pivot"></div>
                     </div>
                     <div class="p-6 bg-slate-900 rounded-2xl text-white">
-                        <h4 class="font-bold mb-2 flex items-center gap-2">
-                            <i class="fas fa-seedling text-grace-blue"></i> The Science of Hope
-                        </h4>
-                        <p class="text-sm text-slate-400 leading-relaxed">
-                            Your brain is neuroplastic. When you stop the dopamine loop, the brain "grows the grass back." Renewal isn't just a spiritual metaphor; it's a biological reality.
-                        </p>
+                        <h4 class="font-bold mb-2 flex items-center gap-2"><i class="fas fa-brain text-grace-blue"></i> Neuroplasticity</h4>
+                        <p class="text-sm text-slate-400">Stop the dopamine loop, and the brain "grows the grass back." Renewal is a biological reality.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- The 6 Digital Traps Updated -->
-    <section id="traps" class="py-24 px-6 bg-white">
+    <!-- Parents Roadmap Section -->
+    <section id="roadmap" class="py-24 px-6 bg-white border-y border-slate-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-5">
+                    <span class="step-pill bg-orange-100 text-orange-700">Family Strategy</span>
+                    <h2 class="text-4xl font-extrabold mb-6 text-slate-900">Parents Roadmap</h2>
+                    <h3 class="text-xl font-bold mb-8 flex items-center gap-3">
+                        <i class="fas fa-layer-group text-grace-blue"></i> The "Escalator Approach"
+                    </h3>
+                    <div class="space-y-8">
+                        <div class="escalator-step pb-8">
+                            <div class="step-dot"></div>
+                            <h4 class="font-bold text-slate-800">Elementary (5-11): Protector Role</h4>
+                            <p class="text-sm text-slate-500 mt-1">No private devices. Focus on sensory and physical play.</p>
+                        </div>
+                        <div class="escalator-step pb-8">
+                            <div class="step-dot"></div>
+                            <h4 class="font-bold text-slate-800">Middle School (12-14): Trainer Role</h4>
+                            <p class="text-sm text-slate-500 mt-1">Public spaces only. Teach digital hygiene and keep phones out of bedrooms.</p>
+                        </div>
+                        <div class="escalator-step">
+                            <div class="step-dot"></div>
+                            <h4 class="font-bold text-slate-800">High School (15-18): Mentor Role</h4>
+                            <p class="text-sm text-slate-500 mt-1">Collaborative limits. Focus on the "why" to build self-regulation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="bg-slate-900 text-white p-10 rounded-[2.5rem] shadow-xl">
+                        <h3 class="text-2xl font-bold mb-4 text-grace-blue"><i class="fas fa-battery-three-quarters"></i> Kitchen Charging Rule</h3>
+                        <p class="text-slate-300 text-sm mb-6">All devices—including those belonging to parents—charge in a neutral zone like the kitchen overnight.</p>
+                        <div class="grid sm:grid-cols-2 gap-4 text-xs">
+                            <div class="p-4 bg-white/5 rounded-xl border border-white/10"><strong>Protecting Sleep:</strong> Eliminates doomscrolling.</div>
+                            <div class="p-4 bg-white/5 rounded-xl border border-white/10"><strong>Modeling Integrity:</strong> Parents lead by example.</div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 p-10 rounded-[2.5rem] border border-blue-100">
+                        <h3 class="text-2xl font-bold mb-4">From Secrecy to Safety</h3>
+                        <p class="text-sm text-slate-600 mb-6">"If they knew, they wouldn't love me." Addiction thrives in the dark. We shift from a "policing" mindset to a "shepherding" mindset.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The 6 Digital Traps -->
+    <section id="traps" class="py-24 px-6 bg-slate-50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <span class="step-pill bg-purple-100 text-purple-700">Heart-Level Awareness</span>
                 <h2 class="text-4xl font-extrabold mb-4 text-slate-900">The 6 Digital Traps</h2>
-                <p class="text-slate-500 max-w-2xl mx-auto">
-                    Each trap is fueled by a specific brain trigger. Awareness is the first step to moving from simple "screen time" rules to heart-level conversations.
-                </p>
+                <p class="text-slate-500 max-w-2xl mx-auto">Awareness is the first step to heart-level conversations.</p>
             </div>
-
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto bg-white rounded-3xl shadow-sm border border-slate-200">
                 <table class="w-full text-left border-collapse min-w-[800px]">
                     <thead>
-                        <tr class="border-b-2 border-slate-100">
-                            <th class="py-6 px-4 font-black uppercase text-[10px] tracking-widest text-slate-400">Trap</th>
-                            <th class="py-6 px-4 font-black uppercase text-[10px] tracking-widest text-slate-400">The Brain Trigger</th>
-                            <th class="py-6 px-4 font-black uppercase text-[10px] tracking-widest text-slate-400">Leadership/Parenting Strategy</th>
+                        <tr class="border-b border-slate-100">
+                            <th class="py-6 px-6 font-black uppercase text-[10px] tracking-widest text-slate-400">Trap</th>
+                            <th class="py-6 px-6 font-black uppercase text-[10px] tracking-widest text-slate-400">The Brain Trigger</th>
+                            <th class="py-6 px-6 font-black uppercase text-[10px] tracking-widest text-slate-400">Strategy</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-50">
-                        <!-- Row 1: Social Media -->
                         <tr>
-                            <td class="py-8 px-4">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-xl flex items-center justify-center"><i class="fas fa-hashtag"></i></div>
-                                    <span class="font-bold text-slate-900">Social Media</span>
-                                </div>
-                            </td>
-                            <td class="py-8 px-4 text-sm text-slate-600 max-w-xs">
-                                <strong class="text-slate-900 block mb-1">Social Validation:</strong>
-                                Hits of dopamine from likes mimic real-world acceptance.
-                            </td>
-                            <td class="py-8 px-4 text-sm">
-                                <p class="mb-2"><strong>Parent:</strong> Ban phones in bedrooms to stop comparison loops.</p>
-                                <p><strong>Church:</strong> Address the "Shame Cycle" by modeling vulnerability.</p>
-                            </td>
+                            <td class="py-8 px-6 font-bold text-slate-900">Social Media</td>
+                            <td class="py-8 px-6 text-sm text-slate-600"><strong>Social Validation:</strong> Dopamine hits mimic real acceptance.</td>
+                            <td class="py-8 px-6 text-sm">Ban phones in bedrooms; model vulnerability.</td>
                         </tr>
-                        <!-- Row 2: Pornography -->
                         <tr>
-                            <td class="py-8 px-4">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-purple-50 text-purple-500 rounded-xl flex items-center justify-center"><i class="fas fa-user-lock"></i></div>
-                                    <span class="font-bold text-slate-900">Online Pornography</span>
-                                </div>
-                            </td>
-                            <td class="py-8 px-4 text-sm text-slate-600 max-w-xs">
-                                <strong class="text-slate-900 block mb-1">Hyper-stimulation:</strong>
-                                Provides unnatural novelty that dulls the ability to enjoy real intimacy.
-                            </td>
-                            <td class="py-8 px-4 text-sm">
-                                <p class="mb-2"><strong>Parent:</strong> Discuss why purity matters rather than just setting filters.</p>
-                                <p><strong>Church:</strong> Create "No Judgment Zones."</p>
-                            </td>
+                            <td class="py-8 px-6 font-bold text-slate-900">Pornography</td>
+                            <td class="py-8 px-6 text-sm text-slate-600"><strong>Hyper-stimulation:</strong> Novelty dulls real intimacy.</td>
+                            <td class="py-8 px-6 text-sm">Discuss why purity matters; create No Judgment Zones.</td>
                         </tr>
-                        <!-- Row 3: Video Gaming -->
                         <tr>
-                            <td class="py-8 px-4">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-emerald-50 text-emerald-500 rounded-xl flex items-center justify-center"><i class="fas fa-gamepad"></i></div>
-                                    <span class="font-bold text-slate-900">Video Gaming</span>
-                                </div>
-                            </td>
-                            <td class="py-8 px-4 text-sm text-slate-600 max-w-xs">
-                                <strong class="text-slate-900 block mb-1">Variable Rewards:</strong>
-                                The "one more level" loop creates a sense of achievement with no real fruit.
-                            </td>
-                            <td class="py-8 px-4 text-sm">
-                                <p class="mb-2"><strong>Parent:</strong> Enforce "Public Spaces Only."</p>
-                                <p><strong>Church:</strong> Encourage youth to use skills for real-world service.</p>
-                            </td>
+                            <td class="py-8 px-6 font-bold text-slate-900">Video Gaming</td>
+                            <td class="py-8 px-6 text-sm text-slate-600"><strong>Variable Rewards:</strong> Loops create achievement without fruit.</td>
+                            <td class="py-8 px-6 text-sm">Enforce Public Spaces Only; use skills for real service.</td>
                         </tr>
-                        <!-- Row 4: Online Gambling -->
                         <tr>
-                            <td class="py-8 px-4">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-rose-50 text-rose-500 rounded-xl flex items-center justify-center"><i class="fas fa-dice"></i></div>
-                                    <span class="font-bold text-slate-900">Online Gambling</span>
-                                </div>
-                            </td>
-                            <td class="py-8 px-4 text-sm text-slate-600 max-w-xs">
-                                <strong class="text-slate-900 block mb-1">Intermittent Reinforcement:</strong>
-                                The "near miss" keeps the brain chasing a win.
-                            </td>
-                            <td class="py-8 px-4 text-sm">
-                                <p class="mb-2"><strong>Parent:</strong> Monitor sports betting apps.</p>
-                                <p><strong>Church:</strong> Provide financial stewardship classes.</p>
-                            </td>
+                            <td class="py-8 px-6 font-bold text-slate-900">Gambling</td>
+                            <td class="py-8 px-6 text-sm text-slate-600"><strong>Intermittent Reinforcement:</strong> Chasing the win.</td>
+                            <td class="py-8 px-6 text-sm">Monitor betting apps; provide stewardship classes.</td>
                         </tr>
-                        <!-- Row 5: Shopping -->
                         <tr>
-                            <td class="py-8 px-4">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-orange-50 text-orange-500 rounded-xl flex items-center justify-center"><i class="fas fa-shopping-cart"></i></div>
-                                    <span class="font-bold text-slate-900">Compulsive Shopping</span>
-                                </div>
-                            </td>
-                            <td class="py-8 px-4 text-sm text-slate-600 max-w-xs">
-                                <strong class="text-slate-900 block mb-1">Stress-Coping:</strong>
-                                Used to numb anxiety rather than solve it.
-                            </td>
-                            <td class="py-8 px-4 text-sm">
-                                <p class="mb-2"><strong>Parent:</strong> Model finding joy in "Analog Anchors."</p>
-                                <p><strong>Church:</strong> Focus on holistic recovery—treating the stress.</p>
-                            </td>
+                            <td class="py-8 px-6 font-bold text-slate-900">Shopping</td>
+                            <td class="py-8 px-6 text-sm text-slate-600"><strong>Stress-Coping:</strong> Used to numb anxiety.</td>
+                            <td class="py-8 px-6 text-sm">Model finding joy in "Analog Anchors."</td>
                         </tr>
-                        <!-- Row 6: Doomscrolling -->
                         <tr>
-                            <td class="py-8 px-4">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-yellow-50 text-yellow-600 rounded-xl flex items-center justify-center"><i class="fas fa-newspaper"></i></div>
-                                    <span class="font-bold text-slate-900">Doomscrolling</span>
-                                </div>
-                            </td>
-                            <td class="py-8 px-4 text-sm text-slate-600 max-w-xs">
-                                <strong class="text-slate-900 block mb-1">Outrage Loop:</strong>
-                                Brain is wired to pay attention to threats; news feeds exploit this.
-                            </td>
-                            <td class="py-8 px-4 text-sm">
-                                <p class="mb-2"><strong>Parent:</strong> Practice silence during commutes.</p>
-                                <p><strong>Church:</strong> Encourage "First 15" minutes in Scripture.</p>
-                            </td>
+                            <td class="py-8 px-6 font-bold text-slate-900">Doomscrolling</td>
+                            <td class="py-8 px-6 text-sm text-slate-600"><strong>Outrage Loop:</strong> Exploiting biological threat-detection.</td>
+                            <td class="py-8 px-6 text-sm">Practice silence on commutes; "First 15" in Scripture.</td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- The 6 Essentials Section -->
+    <section id="essentials" class="py-24 bg-white px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="step-pill bg-emerald-100 text-emerald-700">The New Normal</span>
+                <h2 class="text-4xl font-extrabold mb-4 text-slate-900">The 6 Grace Essentials</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
+                    <h4 class="text-xl font-bold mb-2">1. Gather</h4>
+                    <p class="text-[10px] font-black text-grace-blue uppercase tracking-widest mb-4">Scrolls → Worship</p>
+                    <p class="text-sm text-slate-500">We prioritize the body in person. Gathering reminds us we are part of something larger.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
+                    <h4 class="text-xl font-bold mb-2">2. Connect</h4>
+                    <p class="text-[10px] font-black text-grace-blue uppercase tracking-widest mb-4">Isolation → Community</p>
+                    <p class="text-sm text-slate-500">C-Groups are where we trade secrecy for safety. Being known is the first step toward healing.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
+                    <h4 class="text-xl font-bold mb-2">3. Serve</h4>
+                    <p class="text-[10px] font-black text-grace-blue uppercase tracking-widest mb-4">Indulgence → Action</p>
+                    <p class="text-sm text-slate-500">Putting down the phone to pick up a towel. We find real achievement in service.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
+                    <h4 class="text-xl font-bold mb-2">4. Influence</h4>
+                    <p class="text-[10px] font-black text-grace-blue uppercase tracking-widest mb-4">Feed → Authentic Life</p>
+                    <p class="text-sm text-slate-500">Influence isn't followers, but integrity without a filter.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
+                    <h4 class="text-xl font-bold mb-2">5. Devotion</h4>
+                    <p class="text-[10px] font-black text-grace-blue uppercase tracking-widest mb-4">Noise → First 15</p>
+                    <p class="text-sm text-slate-500">Spend the first 15 minutes of your day in the Word before any app.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
+                    <h4 class="text-xl font-bold mb-2">6. Generosity</h4>
+                    <p class="text-[10px] font-black text-grace-blue uppercase tracking-widest mb-4">Consumption → Open Hands</p>
+                    <p class="text-sm text-slate-500">Spending time and money to bless others instead of draining them on digital idols.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -320,11 +345,11 @@
     </footer>
 
     <script>
-        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
                 if (target) {
                     window.scrollTo({
                         top: target.offsetTop - 80,
