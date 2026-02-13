@@ -90,34 +90,45 @@
             border-radius: 50%;
             z-index: 10;
         }
+
+        /* Fix for logo rendering */
+        .logo-img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body class="text-slate-900">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <nav class="sticky top-0 z-50 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="https://images.squarespace-cdn.com/content/v1/5696d5e5c21b86603a1523c0/1454512965369-0V0S6UOY6N6N0V0S6UOY/grace-logo-color.png" alt="Grace Community Church" class="h-10 md:h-12 w-auto">
+                <!-- Direct link to Grace Logo -->
+                <img src="https://images.squarespace-cdn.com/content/v1/5696d5e5c21b86603a1523c0/1454512965369-0V0S6UOY6N6N0V0S6UOY/grace-logo-color.png" 
+                     alt="Grace Community Church" 
+                     class="h-10 md:h-12 w-auto logo-img">
             </div>
             <div class="hidden lg:flex gap-8 font-bold text-[10px] uppercase tracking-widest text-slate-500">
                 <a href="#vision" class="hover:text-grace-blue transition-colors">Vision</a>
+                <a href="#scripture" class="hover:text-grace-blue transition-colors">Scripture</a>
                 <a href="#science" class="hover:text-grace-blue transition-colors">Science</a>
                 <a href="#roadmap" class="hover:text-grace-blue transition-colors">Families</a>
-                <a href="#reset" class="hover:text-rose-600 transition-colors">Lent Reset</a>
-                <a href="#essentials" class="hover:text-grace-blue transition-colors">Essentials</a>
+                <a href="#reset" class="hover:text-rose-600 transition-colors font-black">Lent Reset</a>
             </div>
             <button id="menu-btn" class="lg:hidden text-slate-400 p-2">
                 <i class="fas fa-bars text-xl"></i>
             </button>
         </div>
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 p-6 absolute w-full left-0 shadow-xl">
             <div class="flex flex-col gap-4 font-bold text-[11px] uppercase tracking-widest text-slate-500">
                 <a href="#vision" class="mobile-link">Vision</a>
+                <a href="#scripture" class="mobile-link">Scripture</a>
                 <a href="#science" class="mobile-link">Science</a>
                 <a href="#roadmap" class="mobile-link">Families</a>
                 <a href="#reset" class="mobile-link text-rose-600">Lent Reset</a>
-                <a href="#essentials" class="mobile-link">Essentials</a>
             </div>
         </div>
     </nav>
@@ -140,6 +151,30 @@
             <div class="space-y-6 text-slate-600 leading-relaxed text-base md:text-lg">
                 <p class="font-semibold text-slate-800 italic">"We aren't just 'trying harder'; we are intentionally giving our brains the space and time to heal through grace and community."</p>
                 <p>Addiction thrives in the dark. By bringing our hidden habits into the light of a supportive community, we remove the power of shame. It is only when we are open with one another that true, holistic healing can take place.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripture Section -->
+    <section id="scripture" class="py-16 bg-white px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="step-pill bg-blue-100 text-blue-700">The Spiritual Anchor</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Battle for the Spirit</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-8 rounded-[2rem] border border-slate-100 bg-slate-50 flex flex-col justify-between">
+                    <p class="text-lg text-slate-700 italic mb-6">"Do not be conformed to this world, but be transformed by the renewal of your mind."</p>
+                    <p class="font-bold text-grace-blue text-xs uppercase tracking-widest">— Romans 12:2</p>
+                </div>
+                <div class="p-8 rounded-[2rem] border border-slate-100 bg-slate-50 flex flex-col justify-between">
+                    <p class="text-lg text-slate-700 italic mb-6">"Setting the mind on the Spirit provides the clarity that comes when digital noise stops."</p>
+                    <p class="font-bold text-grace-blue text-xs uppercase tracking-widest">— Romans 8</p>
+                </div>
+                <div class="p-8 rounded-[2rem] border border-slate-100 bg-slate-50 flex flex-col justify-between">
+                    <p class="text-lg text-slate-700 italic mb-6">"Put off your old self... and be renewed in the spirit of your minds."</p>
+                    <p class="font-bold text-grace-blue text-xs uppercase tracking-widest">— Ephesians 4</p>
+                </div>
             </div>
         </div>
     </section>
@@ -251,7 +286,8 @@
 
     <!-- Footer -->
     <footer class="bg-slate-900 py-20 text-center border-t border-white/5">
-        <img src="https://images.squarespace-cdn.com/content/v1/5696d5e5c21b86603a1523c0/1454512965369-0V0S6UOY6N6N0V0S6UOY/grace-logo-color.png" class="h-10 mx-auto grayscale opacity-40 mb-8">
+        <img src="https://images.squarespace-cdn.com/content/v1/5696d5e5c21b86603a1523c0/1454512965369-0V0S6UOY6N6N0V0S6UOY/grace-logo-color.png" 
+             class="h-10 mx-auto grayscale opacity-40 mb-8 logo-img">
         <p class="text-[10px] text-slate-500 font-bold tracking-[0.4em] uppercase">Grace Community Church &copy; 2026</p>
     </footer>
 
