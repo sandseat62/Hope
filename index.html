@@ -91,24 +91,30 @@
             z-index: 10;
         }
 
-        /* Fix for logo rendering */
+        /* Robust Logo Container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
         .logo-img {
-            display: block;
-            max-width: 100%;
-            height: auto;
+            display: block !important;
+            height: 48px !important; /* Forces visible height */
+            width: auto !important;
+            min-width: 100px; /* Ensures space is carved out */
+            object-fit: contain;
         }
     </style>
 </head>
 <body class="text-slate-900">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white border-b border-slate-200">
+    <nav class="sticky top-0 z-[100] bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex items-center">
-                <!-- Direct link to Grace Logo -->
+            <div class="logo-container">
                 <img src="https://images.squarespace-cdn.com/content/v1/5696d5e5c21b86603a1523c0/1454512965369-0V0S6UOY6N6N0V0S6UOY/grace-logo-color.png" 
                      alt="Grace Community Church" 
-                     class="h-10 md:h-12 w-auto logo-img">
+                     class="logo-img">
             </div>
             <div class="hidden lg:flex gap-8 font-bold text-[10px] uppercase tracking-widest text-slate-500">
                 <a href="#vision" class="hover:text-grace-blue transition-colors">Vision</a>
@@ -286,8 +292,10 @@
 
     <!-- Footer -->
     <footer class="bg-slate-900 py-20 text-center border-t border-white/5">
-        <img src="https://images.squarespace-cdn.com/content/v1/5696d5e5c21b86603a1523c0/1454512965369-0V0S6UOY6N6N0V0S6UOY/grace-logo-color.png" 
-             class="h-10 mx-auto grayscale opacity-40 mb-8 logo-img">
+        <div class="flex justify-center mb-8">
+            <img src="https://images.squarespace-cdn.com/content/v1/5696d5e5c21b86603a1523c0/1454512965369-0V0S6UOY6N6N0V0S6UOY/grace-logo-color.png" 
+                 class="h-10 w-auto logo-img grayscale opacity-40">
+        </div>
         <p class="text-[10px] text-slate-500 font-bold tracking-[0.4em] uppercase">Grace Community Church &copy; 2026</p>
     </footer>
 
