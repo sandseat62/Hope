@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,10 +19,15 @@
             --grace-dark: #0f172a;
         }
 
+        /* Essential for proper anchor navigation spacing */
+        html {
+            scroll-padding-top: 5rem; /* Matches the 80px (h-20) header */
+        }
+
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
-            scroll-behavior: smooth;
             background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .text-grace-blue { color: var(--grace-blue); }
@@ -102,12 +107,17 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
+
+        /* Smooth mobile transitions */
+        #mobile-menu {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
     </style>
 </head>
 <body class="text-slate-900">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 md:w-12 md:h-12 bg-grace-blue rounded-2xl flex items-center justify-center text-white text-xl md:text-2xl shadow-lg shadow-blue-500/30">
@@ -118,15 +128,30 @@
                     <span class="text-[9px] md:text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Community Church</span>
                 </div>
             </div>
+            <!-- Desktop Nav -->
             <div class="hidden lg:flex gap-6 font-bold text-[10px] uppercase tracking-widest text-slate-500">
-                <a href="#vision" class="hover:text-grace-blue transition-colors">Vision</a>
-                <a href="#science" class="hover:text-grace-blue transition-colors">Science</a>
-                <a href="#roadmap" class="hover:text-grace-blue transition-colors">Roadmap</a>
-                <a href="#traps" class="hover:text-grace-blue transition-colors">Traps</a>
-                <a href="#essentials" class="hover:text-grace-blue transition-colors">Essentials</a>
+                <a href="#vision" class="hover:text-grace-blue transition-colors py-2 px-1">Vision</a>
+                <a href="#scripture" class="hover:text-grace-blue transition-colors py-2 px-1">Scripture</a>
+                <a href="#science" class="hover:text-grace-blue transition-colors py-2 px-1">Science</a>
+                <a href="#roadmap" class="hover:text-grace-blue transition-colors py-2 px-1">Roadmap</a>
+                <a href="#traps" class="hover:text-grace-blue transition-colors py-2 px-1">Traps</a>
+                <a href="#essentials" class="hover:text-grace-blue transition-colors py-2 px-1">Essentials</a>
             </div>
-            <div class="lg:hidden text-slate-400">
+            <!-- Mobile Toggle -->
+            <button id="menu-btn" class="lg:hidden text-slate-400 p-2 focus:outline-none" aria-label="Toggle Menu">
                 <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 absolute w-full left-0 p-6 shadow-xl">
+            <div class="flex flex-col gap-4 font-bold text-[11px] uppercase tracking-widest text-slate-500">
+                <a href="#vision" class="mobile-link hover:text-grace-blue py-2">Vision</a>
+                <a href="#scripture" class="mobile-link hover:text-grace-blue py-2">Scripture</a>
+                <a href="#science" class="mobile-link hover:text-grace-blue py-2">Science</a>
+                <a href="#roadmap" class="mobile-link hover:text-grace-blue py-2">Roadmap</a>
+                <a href="#traps" class="mobile-link hover:text-grace-blue py-2">Traps</a>
+                <a href="#essentials" class="mobile-link hover:text-grace-blue py-2">Essentials</a>
             </div>
         </div>
     </nav>
@@ -148,6 +173,42 @@
                 <p class="font-semibold text-slate-800 italic">"We aren't just 'trying harder'; we are intentionally giving our brains the space and time to heal through grace and community."</p>
                 <p>At Grace Community Church, we value integrity above all else. When it comes to our digital lives, many of us live behind heavy curtains of secrecy and isolation. This guide brings together science and scripture to help you step out into the light.</p>
                 <p>We see digital addiction as a dual battle: a <strong>battle for the mind</strong> (biological) and a <strong>battle for the spirit</strong> (spiritual).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripture Section -->
+    <section id="scripture" class="py-16 md:py-24 bg-white px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="step-pill bg-blue-100 text-blue-700">The Spiritual Anchor</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-slate-900">Battle for the Spirit</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">Recovery isn't just biological; it's a renewal of our identity in Christ.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-8 rounded-[2rem] border border-slate-100 bg-slate-50 relative overflow-hidden group">
+                    <div class="absolute -right-4 -top-4 text-blue-100 text-8xl transition-transform group-hover:scale-110">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <h4 class="text-grace-blue font-bold text-sm uppercase tracking-widest mb-4">Mind Renewal</h4>
+                    <p class="text-lg text-slate-700 italic mb-6">"Do not be conformed to this world, but be transformed by the renewal of your mind..."</p>
+                    <p class="font-bold text-slate-900 text-sm">— Romans 12:2</p>
+                </div>
+
+                <div class="p-8 rounded-[2rem] border border-slate-100 bg-slate-50 relative overflow-hidden group">
+                    <div class="absolute -right-4 -top-4 text-blue-100 text-8xl transition-transform group-hover:scale-110">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <h4 class="text-grace-blue font-bold text-sm uppercase tracking-widest mb-4">Walking in Light</h4>
+                    <p class="text-lg text-slate-700 italic mb-6">"But if we walk in the light, as he is in the light, we have fellowship with one another..."</p>
+                    <p class="font-bold text-slate-900 text-sm">— 1 John 1:7</p>
+                </div>
+            </div>
+
+            <div class="mt-12 p-8 bg-blue-600 rounded-[2rem] text-white text-center shadow-xl">
+                <h3 class="text-xl font-bold mb-2">The Power of "Us"</h3>
+                <p class="text-blue-100 max-w-3xl mx-auto italic">"You cannot walk faithfully with Jesus in isolation. By bringing hidden habits into the light of a supportive community, we remove the power of shame."</p>
             </div>
         </div>
     </section>
@@ -409,7 +470,7 @@
     </section>
 
     <!-- The 6 Essentials Section -->
-    <section id="essentials" class="py-16 md:py-24 bg-white px-6">
+    <section id="essentials" class="py-16 md:py-24 bg-white px-6 border-t border-slate-100">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
                 <span class="step-pill bg-emerald-100 text-emerald-700">The New Normal</span>
@@ -459,18 +520,54 @@
     </footer>
 
     <script>
+        // DOM Elements
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const headerHeight = 80;
+
+        // Mobile Menu Toggle
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => mobileMenu.style.opacity = '1', 10);
+            } else {
+                mobileMenu.style.opacity = '0';
+                setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+            }
+        });
+
+        // Smooth Scrolling with specific platform handling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+                mobileMenu.style.opacity = '0';
+
                 const targetId = this.getAttribute('href');
                 const target = document.querySelector(targetId);
+                
                 if (target) {
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
                     window.scrollTo({
-                        top: target.offsetTop - 80,
+                        top: targetPosition,
                         behavior: 'smooth'
                     });
+
+                    // Update URL without jump
+                    history.pushState(null, null, targetId);
                 }
             });
+        });
+
+        // Handle window resize (close menu if desktop)
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                mobileMenu.classList.add('hidden');
+            }
         });
     </script>
 </body>
