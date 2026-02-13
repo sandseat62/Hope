@@ -93,6 +93,15 @@
             position: absolute;
             bottom: 35px;
         }
+
+        /* Trap Card Styling */
+        .trap-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .trap-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
     </style>
 </head>
 <body class="text-slate-900">
@@ -101,12 +110,12 @@
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-12 h-12 bg-grace-blue rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg shadow-blue-500/30">
+                <div class="w-10 h-10 md:w-12 md:h-12 bg-grace-blue rounded-2xl flex items-center justify-center text-white text-xl md:text-2xl shadow-lg shadow-blue-500/30">
                     <i class="fas fa-church"></i>
                 </div>
                 <div>
-                    <span class="block font-black text-xl leading-none uppercase tracking-tighter">Grace</span>
-                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Community Church</span>
+                    <span class="block font-black text-lg md:text-xl leading-none uppercase tracking-tighter">Grace</span>
+                    <span class="text-[9px] md:text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Community Church</span>
                 </div>
             </div>
             <div class="hidden lg:flex gap-6 font-bold text-[10px] uppercase tracking-widest text-slate-500">
@@ -116,80 +125,83 @@
                 <a href="#traps" class="hover:text-grace-blue transition-colors">Traps</a>
                 <a href="#essentials" class="hover:text-grace-blue transition-colors">Essentials</a>
             </div>
+            <div class="lg:hidden text-slate-400">
+                <i class="fas fa-bars text-xl"></i>
+            </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="bg-slate-900 text-white py-24 px-6 text-center overflow-hidden relative">
+    <header class="bg-slate-900 text-white py-20 md:py-24 px-6 text-center overflow-hidden relative">
         <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">A Church Without <span class="text-grace-blue">Curtains</span></h1>
-        <p class="text-slate-400 text-xl max-w-2xl mx-auto font-light">Trading secrecy for safety. Pulling back the fabric of our digital life.</p>
+        <h1 class="text-4xl md:text-7xl font-extrabold mb-4 tracking-tight">A Church Without <span class="text-grace-blue">Curtains</span></h1>
+        <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-light">Trading secrecy for safety. Pulling back the fabric of our digital life.</p>
     </header>
 
     <!-- Vision Section -->
-    <section id="vision" class="py-20 px-6 -mt-10 relative z-20">
-        <div class="max-w-4xl mx-auto bg-white rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-slate-100">
-            <h2 class="text-3xl font-extrabold text-slate-900 mb-6 flex items-center gap-3">
+    <section id="vision" class="py-12 md:py-20 px-6 -mt-10 relative z-20">
+        <div class="max-w-4xl mx-auto bg-white rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-slate-100">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-6 flex items-center gap-3">
                 <span class="w-1.5 h-8 bg-grace-blue rounded-full"></span> Our Vision for Freedom
             </h2>
-            <div class="space-y-6 text-slate-600 leading-relaxed text-lg">
+            <div class="space-y-6 text-slate-600 leading-relaxed text-base md:text-lg">
                 <p class="font-semibold text-slate-800 italic">"We aren't just 'trying harder'; we are intentionally giving our brains the space and time to heal through grace and community."</p>
                 <p>At Grace Community Church, we value integrity above all else. When it comes to our digital lives, many of us live behind heavy curtains of secrecy and isolation. This guide brings together science and scripture to help you step out into the light.</p>
-                <p>We see digital addiction as a dual battle: a <strong>battle for the mind</strong> (biological) and a <strong>battle for the spirit</strong> (spiritual). Through our "No Judgment Zones," the power of secrecy is broken.</p>
+                <p>We see digital addiction as a dual battle: a <strong>battle for the mind</strong> (biological) and a <strong>battle for the spirit</strong> (spiritual).</p>
             </div>
         </div>
     </section>
 
     <!-- Science Section -->
-    <section id="science" class="py-24 bg-slate-50 px-6">
+    <section id="science" class="py-16 md:py-24 bg-slate-50 px-6">
         <div class="max-w-6xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div class="grid lg:grid-cols-2 gap-12 md:gap-16 items-start">
                 <div>
                     <span class="step-pill bg-blue-100 text-blue-700">The Biology of Freedom</span>
-                    <h2 class="text-4xl font-extrabold mb-8">The Pleasure-Pain See-Saw</h2>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-8">The Pleasure-Pain See-Saw</h2>
                     
                     <div class="space-y-8">
-                        <div class="flex gap-6">
-                            <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 shrink-0">
+                        <div class="flex gap-4 md:gap-6">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 shrink-0">
                                 <i class="fas fa-arrow-up"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-900 text-xl">The Pleasure Side</h4>
-                                <p class="text-slate-600">Engaging in digital traps releases dopamine, tilting the see-saw toward pleasure.</p>
+                                <h4 class="font-bold text-slate-900 text-lg md:text-xl">The Pleasure Side</h4>
+                                <p class="text-sm md:text-base text-slate-600">Engaging in digital traps releases dopamine, tilting the see-saw toward pleasure.</p>
                             </div>
                         </div>
-                        <div class="flex gap-6">
-                            <div class="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center text-rose-600 shrink-0">
+                        <div class="flex gap-4 md:gap-6">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-rose-100 rounded-xl flex items-center justify-center text-rose-600 shrink-0">
                                 <i class="fas fa-arrow-down"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-900 text-xl">The Pain Side</h4>
-                                <p class="text-slate-600">To counteract this "high," the brain automatically adds weight to the pain side, manifesting as irritability or anxiety when the screen is off.</p>
+                                <h4 class="font-bold text-slate-900 text-lg md:text-xl">The Pain Side</h4>
+                                <p class="text-sm md:text-base text-slate-600">To counteract this "high," the brain automatically adds weight to the pain side, manifesting as irritability or anxiety when the screen is off.</p>
                             </div>
                         </div>
-                        <div class="flex gap-6">
-                            <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600 shrink-0">
+                        <div class="flex gap-4 md:gap-6">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600 shrink-0">
                                 <i class="fas fa-lock"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-900 text-xl">The Chronic Trap</h4>
-                                <p class="text-slate-600">The brain stays tilted toward pain just to stay "level." This is why people eventually need their phones just to feel "normal."</p>
+                                <h4 class="font-bold text-slate-900 text-lg md:text-xl">The Chronic Trap</h4>
+                                <p class="text-sm md:text-base text-slate-600">The brain stays tilted toward pain just to stay "level." This is why people eventually need their phones just to feel "normal."</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border border-slate-200">
+                <div class="bg-white p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-xl border border-slate-200">
                     <div class="seesaw-container mb-8">
                         <div class="seesaw-plank">
-                            <div class="absolute -top-10 left-4 bg-emerald-500 text-white p-2 rounded-lg text-xs font-bold shadow-lg">PLEASURE</div>
-                            <div class="absolute -bottom-10 right-4 bg-rose-500 text-white p-2 rounded-lg text-xs font-bold shadow-lg">PAIN</div>
+                            <div class="absolute -top-10 left-0 md:left-4 bg-emerald-500 text-white p-2 rounded-lg text-[10px] md:text-xs font-bold shadow-lg">PLEASURE</div>
+                            <div class="absolute -bottom-10 right-0 md:right-4 bg-rose-500 text-white p-2 rounded-lg text-[10px] md:text-xs font-bold shadow-lg">PAIN</div>
                         </div>
                         <div class="seesaw-pivot"></div>
                     </div>
-                    <div class="p-6 bg-slate-900 rounded-2xl text-white">
+                    <div class="p-5 bg-slate-900 rounded-2xl text-white">
                         <h4 class="font-bold mb-2 flex items-center gap-2"><i class="fas fa-brain text-grace-blue"></i> Neuroplasticity</h4>
-                        <p class="text-sm text-slate-400">Stop the dopamine loop, and the brain "grows the grass back." Renewal is a biological reality.</p>
+                        <p class="text-xs md:text-sm text-slate-400">Stop the dopamine loop, and the brain "grows the grass back." Renewal is a biological reality.</p>
                     </div>
                 </div>
             </div>
@@ -197,13 +209,13 @@
     </section>
 
     <!-- Parents Roadmap Section -->
-    <section id="roadmap" class="py-24 px-6 bg-white border-y border-slate-100">
+    <section id="roadmap" class="py-16 md:py-24 px-6 bg-white border-y border-slate-100">
         <div class="max-w-6xl mx-auto">
-            <div class="grid lg:grid-cols-12 gap-16">
+            <div class="grid lg:grid-cols-12 gap-12 md:gap-16">
                 <div class="lg:col-span-5">
                     <span class="step-pill bg-orange-100 text-orange-700">Family Strategy</span>
-                    <h2 class="text-4xl font-extrabold mb-6 text-slate-900">Parents Roadmap</h2>
-                    <h3 class="text-xl font-bold mb-8 flex items-center gap-3">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-slate-900">Parents Roadmap</h2>
+                    <h3 class="text-lg md:text-xl font-bold mb-8 flex items-center gap-3">
                         <i class="fas fa-layer-group text-grace-blue"></i> The "Escalator Approach"
                     </h3>
                     <div class="space-y-8">
@@ -225,18 +237,18 @@
                     </div>
                 </div>
 
-                <div class="lg:col-span-7 space-y-8">
-                    <div class="bg-slate-900 text-white p-10 rounded-[2.5rem] shadow-xl">
-                        <h3 class="text-2xl font-bold mb-4 text-grace-blue"><i class="fas fa-battery-three-quarters"></i> Kitchen Charging Rule</h3>
+                <div class="lg:col-span-7 space-y-6 md:space-y-8">
+                    <div class="bg-slate-900 text-white p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-xl">
+                        <h3 class="text-xl md:text-2xl font-bold mb-4 text-grace-blue"><i class="fas fa-battery-three-quarters"></i> Kitchen Charging Rule</h3>
                         <p class="text-slate-300 text-sm mb-6">All devices—including those belonging to parents—charge in a neutral zone like the kitchen overnight.</p>
-                        <div class="grid sm:grid-cols-2 gap-4 text-xs">
+                        <div class="grid sm:grid-cols-2 gap-4 text-[10px] md:text-xs">
                             <div class="p-4 bg-white/5 rounded-xl border border-white/10"><strong>Protecting Sleep:</strong> Eliminates doomscrolling.</div>
                             <div class="p-4 bg-white/5 rounded-xl border border-white/10"><strong>Modeling Integrity:</strong> Parents lead by example.</div>
                         </div>
                     </div>
-                    <div class="bg-blue-50 p-10 rounded-[2.5rem] border border-blue-100">
-                        <h3 class="text-2xl font-bold mb-4">From Secrecy to Safety</h3>
-                        <p class="text-sm text-slate-600 mb-6">"If they knew, they wouldn't love me." Addiction thrives in the dark. We shift from a "policing" mindset to a "shepherding" mindset.</p>
+                    <div class="bg-blue-50 p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-blue-100">
+                        <h3 class="text-xl md:text-2xl font-bold mb-4 text-slate-900">From Secrecy to Safety</h3>
+                        <p class="text-sm text-slate-600">"If they knew, they wouldn't love me." Addiction thrives in the dark. We shift from a "policing" mindset to a "shepherding" mindset.</p>
                     </div>
                 </div>
             </div>
@@ -244,67 +256,169 @@
     </section>
 
     <!-- The 6 Digital Traps -->
-    <section id="traps" class="py-24 px-6 bg-slate-50">
+    <section id="traps" class="py-16 md:py-24 px-6 bg-slate-50">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-12 md:mb-16">
                 <span class="step-pill bg-purple-100 text-purple-700">Heart-Level Awareness</span>
-                <h2 class="text-4xl font-extrabold mb-4 text-slate-900">The 6 Digital Traps</h2>
-                <p class="text-slate-500 max-w-2xl mx-auto">Awareness is the first step to heart-level conversations.</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-slate-900">The 6 Digital Traps</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto text-sm md:text-base">Identify the brain triggers and learn how to respond as a parent or leader.</p>
             </div>
-            <div class="overflow-x-auto bg-white rounded-3xl shadow-sm border border-slate-200">
-                <table class="w-full text-left border-collapse min-w-[800px]">
-                    <thead>
-                        <tr class="border-b border-slate-100">
-                            <th class="py-6 px-6 font-black uppercase text-[10px] tracking-widest text-slate-400">Trap</th>
-                            <th class="py-6 px-6 font-black uppercase text-[10px] tracking-widest text-slate-400">The Brain Trigger</th>
-                            <th class="py-6 px-6 font-black uppercase text-[10px] tracking-widest text-slate-400">Strategy</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-50">
-                        <tr>
-                            <td class="py-8 px-6 font-bold text-slate-900">Social Media</td>
-                            <td class="py-8 px-6 text-sm text-slate-600"><strong>Social Validation:</strong> Dopamine hits mimic real acceptance.</td>
-                            <td class="py-8 px-6 text-sm">Ban phones in bedrooms; model vulnerability.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-8 px-6 font-bold text-slate-900">Pornography</td>
-                            <td class="py-8 px-6 text-sm text-slate-600"><strong>Hyper-stimulation:</strong> Novelty dulls real intimacy.</td>
-                            <td class="py-8 px-6 text-sm">Discuss why purity matters; create No Judgment Zones.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-8 px-6 font-bold text-slate-900">Video Gaming</td>
-                            <td class="py-8 px-6 text-sm text-slate-600"><strong>Variable Rewards:</strong> Loops create achievement without fruit.</td>
-                            <td class="py-8 px-6 text-sm">Enforce Public Spaces Only; use skills for real service.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-8 px-6 font-bold text-slate-900">Gambling</td>
-                            <td class="py-8 px-6 text-sm text-slate-600"><strong>Intermittent Reinforcement:</strong> Chasing the win.</td>
-                            <td class="py-8 px-6 text-sm">Monitor betting apps; provide stewardship classes.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-8 px-6 font-bold text-slate-900">Shopping</td>
-                            <td class="py-8 px-6 text-sm text-slate-600"><strong>Stress-Coping:</strong> Used to numb anxiety.</td>
-                            <td class="py-8 px-6 text-sm">Model finding joy in "Analog Anchors."</td>
-                        </tr>
-                        <tr>
-                            <td class="py-8 px-6 font-bold text-slate-900">Doomscrolling</td>
-                            <td class="py-8 px-6 text-sm text-slate-600"><strong>Outrage Loop:</strong> Exploiting biological threat-detection.</td>
-                            <td class="py-8 px-6 text-sm">Practice silence on commutes; "First 15" in Scripture.</td>
-                        </tr>
-                    </tbody>
-                </table>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                
+                <!-- Trap Card 1 -->
+                <div class="trap-card bg-white p-6 md:p-8 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center text-xl">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Social Media</h3>
+                    </div>
+                    <div class="space-y-4 flex-grow">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">Brain Trigger</span>
+                            <p class="text-sm text-slate-700"><strong>Social Validation:</strong> Hits of dopamine from likes mimic real acceptance.</p>
+                        </div>
+                        <div class="bg-blue-50/50 p-4 rounded-xl border border-blue-100">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-blue-500 block mb-2">Strategy</span>
+                            <div class="space-y-2 text-sm text-slate-700">
+                                <p><strong>Parent:</strong> Ban phones in bedrooms to stop comparison loops.</p>
+                                <p><strong>Church:</strong> Address the "Shame Cycle" by modeling vulnerability.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trap Card 2 -->
+                <div class="trap-card bg-white p-6 md:p-8 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-purple-50 text-purple-500 rounded-2xl flex items-center justify-center text-xl">
+                            <i class="fas fa-user-lock"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Pornography</h3>
+                    </div>
+                    <div class="space-y-4 flex-grow">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">Brain Trigger</span>
+                            <p class="text-sm text-slate-700"><strong>Hyper-stimulation:</strong> Unnatural novelty that dulls ability for real intimacy.</p>
+                        </div>
+                        <div class="bg-purple-50/50 p-4 rounded-xl border border-purple-100">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-purple-500 block mb-2">Strategy</span>
+                            <div class="space-y-2 text-sm text-slate-700">
+                                <p><strong>Parent:</strong> Move from "Manager to Mentor"—discuss why purity matters.</p>
+                                <p><strong>Church:</strong> Create "No Judgment Zones" for confession.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trap Card 3 -->
+                <div class="trap-card bg-white p-6 md:p-8 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-emerald-50 text-emerald-500 rounded-2xl flex items-center justify-center text-xl">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Video Gaming</h3>
+                    </div>
+                    <div class="space-y-4 flex-grow">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">Brain Trigger</span>
+                            <p class="text-sm text-slate-700"><strong>Variable Rewards:</strong> The "one more level" loop creates fake achievement.</p>
+                        </div>
+                        <div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-emerald-500 block mb-2">Strategy</span>
+                            <div class="space-y-2 text-sm text-slate-700">
+                                <p><strong>Parent:</strong> Public spaces only. Enforce "Analog Weekends."</p>
+                                <p><strong>Church:</strong> Channel gaming skills into real-world service.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trap Card 4 -->
+                <div class="trap-card bg-white p-6 md:p-8 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-rose-50 text-rose-500 rounded-2xl flex items-center justify-center text-xl">
+                            <i class="fas fa-dice"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Online Gambling</h3>
+                    </div>
+                    <div class="space-y-4 flex-grow">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">Brain Trigger</span>
+                            <p class="text-sm text-slate-700"><strong>Intermittent Reinforcement:</strong> The "near miss" keeps the brain chasing.</p>
+                        </div>
+                        <div class="bg-rose-50/50 p-4 rounded-xl border border-rose-100">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-rose-500 block mb-2">Strategy</span>
+                            <div class="space-y-2 text-sm text-slate-700">
+                                <p><strong>Parent:</strong> Strictly monitor sports betting and "loot box" apps.</p>
+                                <p><strong>Church:</strong> Provide financial stewardship and recovery classes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trap Card 5 -->
+                <div class="trap-card bg-white p-6 md:p-8 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-orange-50 text-orange-500 rounded-2xl flex items-center justify-center text-xl">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Compulsive Shopping</h3>
+                    </div>
+                    <div class="space-y-4 flex-grow">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">Brain Trigger</span>
+                            <p class="text-sm text-slate-700"><strong>Stress-Coping:</strong> Used to numb anxiety rather than solving it.</p>
+                        </div>
+                        <div class="bg-orange-50/50 p-4 rounded-xl border border-orange-100">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-orange-500 block mb-2">Strategy</span>
+                            <div class="space-y-2 text-sm text-slate-700">
+                                <p><strong>Parent:</strong> Model finding joy in "Analog Anchors" like hobbies.</p>
+                                <p><strong>Church:</strong> Focus on holistic recovery—treating the stress source.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trap Card 6 -->
+                <div class="trap-card bg-white p-6 md:p-8 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-yellow-50 text-yellow-600 rounded-2xl flex items-center justify-center text-xl">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Doomscrolling</h3>
+                    </div>
+                    <div class="space-y-4 flex-grow">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">Brain Trigger</span>
+                            <p class="text-sm text-slate-700"><strong>Outrage Loop:</strong> Wired to pay attention to threats; news exploits this.</p>
+                        </div>
+                        <div class="bg-yellow-50/50 p-4 rounded-xl border border-yellow-200">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-yellow-600 block mb-2">Strategy</span>
+                            <div class="space-y-2 text-sm text-slate-700">
+                                <p><strong>Parent:</strong> Practice intentional silence during school commutes.</p>
+                                <p><strong>Church:</strong> Encourage "First 15" minutes in Scripture.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- The 6 Essentials Section -->
-    <section id="essentials" class="py-24 bg-white px-6">
+    <section id="essentials" class="py-16 md:py-24 bg-white px-6">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
                 <span class="step-pill bg-emerald-100 text-emerald-700">The New Normal</span>
-                <h2 class="text-4xl font-extrabold mb-4 text-slate-900">The 6 Grace Essentials</h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-8 text-slate-900">The 6 Grace Essentials</h2>
+                <div class="max-w-3xl mx-auto text-slate-600 leading-relaxed text-base md:text-lg space-y-4">
+                    <p>At Grace, we believe that spiritual development happens when we move from being passive consumers to active participants in the life of Jesus. As you step out from behind the "curtains" of digital secrecy, these six essentials become the markers of your renewed life.</p>
+                </div>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                 <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
                     <h4 class="text-xl font-bold mb-2">1. Gather</h4>
                     <p class="text-[10px] font-black text-grace-blue uppercase tracking-widest mb-4">Scrolls → Worship</p>
@@ -340,7 +454,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-500 py-20 px-6 text-center">
+    <footer class="bg-slate-900 text-slate-500 py-16 md:py-20 px-6 text-center">
         <p class="text-xs uppercase tracking-[0.4em] font-bold">Grace Community Church &copy; 2026</p>
     </footer>
 
